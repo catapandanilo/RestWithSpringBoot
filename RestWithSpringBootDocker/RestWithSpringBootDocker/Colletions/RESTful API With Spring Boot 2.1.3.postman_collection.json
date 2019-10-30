@@ -1,0 +1,1837 @@
+{
+	"info": {
+		"_postman_id": "389da683-903c-4953-bb60-ccb7482e7348",
+		"name": "RESTful API With Spring Boot 2.1.3",
+		"description": "Some description about your API.\n\nContact Support:\n Name: Danilo Catapan\n Email: dcatapan@gmail.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "book",
+					"item": [
+						{
+							"name": "v1",
+							"item": [
+								{
+									"name": "{id}",
+									"item": [
+										{
+											"name": "Find a specific book by your ID",
+											"request": {
+												"auth": {
+													"type": "noauth"
+												},
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/book/v1/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"book",
+														"v1",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "<long>",
+															"description": "id"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Not Found",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/book/v1/<long>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"book",
+																"v1",
+																"<long>"
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												},
+												{
+													"name": "Unauthorized",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/book/v1/<long>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"book",
+																"v1",
+																"<long>"
+															]
+														}
+													},
+													"status": "Unauthorized",
+													"code": 401,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												},
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/book/v1/<long>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"book",
+																"v1",
+																"<long>"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n \"_links\": [\n  {\n   \"deprecation\": \"<string>\",\n   \"href\": \"<string>\",\n   \"hreflang\": \"<string>\",\n   \"media\": \"<string>\",\n   \"rel\": \"<string>\",\n   \"templated\": \"<boolean>\",\n   \"title\": \"<string>\",\n   \"type\": \"<string>\"\n  },\n  {\n   \"deprecation\": \"<string>\",\n   \"href\": \"<string>\",\n   \"hreflang\": \"<string>\",\n   \"media\": \"<string>\",\n   \"rel\": \"<string>\",\n   \"templated\": \"<boolean>\",\n   \"title\": \"<string>\",\n   \"type\": \"<string>\"\n  }\n ],\n \"author\": \"<string>\",\n \"id\": \"<long>\",\n \"launchDate\": \"<dateTime>\",\n \"price\": \"<double>\",\n \"title\": \"<string>\"\n}"
+												},
+												{
+													"name": "Forbidden",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/book/v1/<long>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"book",
+																"v1",
+																"<long>"
+															]
+														}
+													},
+													"status": "Forbidden",
+													"code": 403,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										},
+										{
+											"name": "Delete a specific book by your ID",
+											"request": {
+												"auth": {
+													"type": "noauth"
+												},
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/book/v1/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"book",
+														"v1",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "<long>",
+															"description": "id"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Unauthorized",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/book/v1/<long>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"book",
+																"v1",
+																"<long>"
+															]
+														}
+													},
+													"status": "Unauthorized",
+													"code": 401,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												},
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/book/v1/<long>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"book",
+																"v1",
+																"<long>"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "<object>"
+												},
+												{
+													"name": "No Content",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/book/v1/<long>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"book",
+																"v1",
+																"<long>"
+															]
+														}
+													},
+													"status": "No Content",
+													"code": 204,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												},
+												{
+													"name": "Forbidden",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/book/v1/<long>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"book",
+																"v1",
+																"<long>"
+															]
+														}
+													},
+													"status": "Forbidden",
+													"code": 403,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										}
+									],
+									"protocolProfileBehavior": {},
+									"_postman_isSubFolder": true
+								},
+								{
+									"name": "Find all books",
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/book/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"book",
+												"v1"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/book/v1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"book",
+														"v1"
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/book/v1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"book",
+														"v1"
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/book/v1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"book",
+														"v1"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[\n {\n  \"_links\": [\n   {\n    \"deprecation\": \"<string>\",\n    \"href\": \"<string>\",\n    \"hreflang\": \"<string>\",\n    \"media\": \"<string>\",\n    \"rel\": \"<string>\",\n    \"templated\": \"<boolean>\",\n    \"title\": \"<string>\",\n    \"type\": \"<string>\"\n   },\n   {\n    \"deprecation\": \"<string>\",\n    \"href\": \"<string>\",\n    \"hreflang\": \"<string>\",\n    \"media\": \"<string>\",\n    \"rel\": \"<string>\",\n    \"templated\": \"<boolean>\",\n    \"title\": \"<string>\",\n    \"type\": \"<string>\"\n   }\n  ],\n  \"author\": \"<string>\",\n  \"id\": \"<long>\",\n  \"launchDate\": \"<dateTime>\",\n  \"price\": \"<double>\",\n  \"title\": \"<string>\"\n },\n {\n  \"_links\": [\n   {\n    \"deprecation\": \"<string>\",\n    \"href\": \"<string>\",\n    \"hreflang\": \"<string>\",\n    \"media\": \"<string>\",\n    \"rel\": \"<string>\",\n    \"templated\": \"<boolean>\",\n    \"title\": \"<string>\",\n    \"type\": \"<string>\"\n   },\n   {\n    \"deprecation\": \"<string>\",\n    \"href\": \"<string>\",\n    \"hreflang\": \"<string>\",\n    \"media\": \"<string>\",\n    \"rel\": \"<string>\",\n    \"templated\": \"<boolean>\",\n    \"title\": \"<string>\",\n    \"type\": \"<string>\"\n   }\n  ],\n  \"author\": \"<string>\",\n  \"id\": \"<long>\",\n  \"launchDate\": \"<dateTime>\",\n  \"price\": \"<double>\",\n  \"title\": \"<string>\"\n }\n]"
+										},
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/book/v1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"book",
+														"v1"
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Create a new book",
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"_links\": [\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        },\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        }\n    ],\n    \"author\": \"<string>\",\n    \"id\": \"<long>\",\n    \"launchDate\": \"<dateTime>\",\n    \"price\": \"<double>\",\n    \"title\": \"<string>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/book/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"book",
+												"v1"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Created",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"_links\": [\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        },\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        }\n    ],\n    \"author\": \"<string>\",\n    \"id\": \"<long>\",\n    \"launchDate\": \"<dateTime>\",\n    \"price\": \"<double>\",\n    \"title\": \"<string>\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/book/v1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"book",
+														"v1"
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"_links\": [\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        },\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        }\n    ],\n    \"author\": \"<string>\",\n    \"id\": \"<long>\",\n    \"launchDate\": \"<dateTime>\",\n    \"price\": \"<double>\",\n    \"title\": \"<string>\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/book/v1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"book",
+														"v1"
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"_links\": [\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        },\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        }\n    ],\n    \"author\": \"<string>\",\n    \"id\": \"<long>\",\n    \"launchDate\": \"<dateTime>\",\n    \"price\": \"<double>\",\n    \"title\": \"<string>\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/book/v1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"book",
+														"v1"
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"_links\": [\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        },\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        }\n    ],\n    \"author\": \"<string>\",\n    \"id\": \"<long>\",\n    \"launchDate\": \"<dateTime>\",\n    \"price\": \"<double>\",\n    \"title\": \"<string>\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/book/v1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"book",
+														"v1"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n \"_links\": [\n  {\n   \"deprecation\": \"<string>\",\n   \"href\": \"<string>\",\n   \"hreflang\": \"<string>\",\n   \"media\": \"<string>\",\n   \"rel\": \"<string>\",\n   \"templated\": \"<boolean>\",\n   \"title\": \"<string>\",\n   \"type\": \"<string>\"\n  },\n  {\n   \"deprecation\": \"<string>\",\n   \"href\": \"<string>\",\n   \"hreflang\": \"<string>\",\n   \"media\": \"<string>\",\n   \"rel\": \"<string>\",\n   \"templated\": \"<boolean>\",\n   \"title\": \"<string>\",\n   \"type\": \"<string>\"\n  }\n ],\n \"author\": \"<string>\",\n \"id\": \"<long>\",\n \"launchDate\": \"<dateTime>\",\n \"price\": \"<double>\",\n \"title\": \"<string>\"\n}"
+										},
+										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"_links\": [\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        },\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        }\n    ],\n    \"author\": \"<string>\",\n    \"id\": \"<long>\",\n    \"launchDate\": \"<dateTime>\",\n    \"price\": \"<double>\",\n    \"title\": \"<string>\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/book/v1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"book",
+														"v1"
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Update a specific book",
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"_links\": [\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        },\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        }\n    ],\n    \"author\": \"<string>\",\n    \"id\": \"<long>\",\n    \"launchDate\": \"<dateTime>\",\n    \"price\": \"<double>\",\n    \"title\": \"<string>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/book/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"book",
+												"v1"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"_links\": [\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        },\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        }\n    ],\n    \"author\": \"<string>\",\n    \"id\": \"<long>\",\n    \"launchDate\": \"<dateTime>\",\n    \"price\": \"<double>\",\n    \"title\": \"<string>\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/book/v1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"book",
+														"v1"
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"_links\": [\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        },\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        }\n    ],\n    \"author\": \"<string>\",\n    \"id\": \"<long>\",\n    \"launchDate\": \"<dateTime>\",\n    \"price\": \"<double>\",\n    \"title\": \"<string>\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/book/v1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"book",
+														"v1"
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Created",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"_links\": [\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        },\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        }\n    ],\n    \"author\": \"<string>\",\n    \"id\": \"<long>\",\n    \"launchDate\": \"<dateTime>\",\n    \"price\": \"<double>\",\n    \"title\": \"<string>\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/book/v1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"book",
+														"v1"
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"_links\": [\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        },\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        }\n    ],\n    \"author\": \"<string>\",\n    \"id\": \"<long>\",\n    \"launchDate\": \"<dateTime>\",\n    \"price\": \"<double>\",\n    \"title\": \"<string>\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/book/v1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"book",
+														"v1"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n \"_links\": [\n  {\n   \"deprecation\": \"<string>\",\n   \"href\": \"<string>\",\n   \"hreflang\": \"<string>\",\n   \"media\": \"<string>\",\n   \"rel\": \"<string>\",\n   \"templated\": \"<boolean>\",\n   \"title\": \"<string>\",\n   \"type\": \"<string>\"\n  },\n  {\n   \"deprecation\": \"<string>\",\n   \"href\": \"<string>\",\n   \"hreflang\": \"<string>\",\n   \"media\": \"<string>\",\n   \"rel\": \"<string>\",\n   \"templated\": \"<boolean>\",\n   \"title\": \"<string>\",\n   \"type\": \"<string>\"\n  }\n ],\n \"author\": \"<string>\",\n \"id\": \"<long>\",\n \"launchDate\": \"<dateTime>\",\n \"price\": \"<double>\",\n \"title\": \"<string>\"\n}"
+										},
+										{
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"_links\": [\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        },\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        }\n    ],\n    \"author\": \"<string>\",\n    \"id\": \"<long>\",\n    \"launchDate\": \"<dateTime>\",\n    \"price\": \"<double>\",\n    \"title\": \"<string>\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/book/v1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"book",
+														"v1"
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "person",
+					"item": [
+						{
+							"name": "v1",
+							"item": [
+								{
+									"name": "{id}",
+									"item": [
+										{
+											"name": "Find a specific person by your ID",
+											"request": {
+												"auth": {
+													"type": "noauth"
+												},
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/person/v1/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"person",
+														"v1",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "<long>",
+															"description": "id"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Not Found",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/person/v1/<long>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"person",
+																"v1",
+																"<long>"
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												},
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/person/v1/<long>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"person",
+																"v1",
+																"<long>"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n \"_links\": [\n  {\n   \"deprecation\": \"<string>\",\n   \"href\": \"<string>\",\n   \"hreflang\": \"<string>\",\n   \"media\": \"<string>\",\n   \"rel\": \"<string>\",\n   \"templated\": \"<boolean>\",\n   \"title\": \"<string>\",\n   \"type\": \"<string>\"\n  },\n  {\n   \"deprecation\": \"<string>\",\n   \"href\": \"<string>\",\n   \"hreflang\": \"<string>\",\n   \"media\": \"<string>\",\n   \"rel\": \"<string>\",\n   \"templated\": \"<boolean>\",\n   \"title\": \"<string>\",\n   \"type\": \"<string>\"\n  }\n ],\n \"address\": \"<string>\",\n \"firstName\": \"<string>\",\n \"gender\": \"<string>\",\n \"id\": \"<long>\",\n \"lastName\": \"<string>\"\n}"
+												},
+												{
+													"name": "Unauthorized",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/person/v1/<long>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"person",
+																"v1",
+																"<long>"
+															]
+														}
+													},
+													"status": "Unauthorized",
+													"code": 401,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												},
+												{
+													"name": "Forbidden",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/person/v1/<long>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"person",
+																"v1",
+																"<long>"
+															]
+														}
+													},
+													"status": "Forbidden",
+													"code": 403,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										},
+										{
+											"name": "Delete a specific person by your ID",
+											"request": {
+												"auth": {
+													"type": "noauth"
+												},
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/person/v1/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"person",
+														"v1",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "<long>",
+															"description": "id"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Unauthorized",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/person/v1/<long>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"person",
+																"v1",
+																"<long>"
+															]
+														}
+													},
+													"status": "Unauthorized",
+													"code": 401,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												},
+												{
+													"name": "Forbidden",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/person/v1/<long>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"person",
+																"v1",
+																"<long>"
+															]
+														}
+													},
+													"status": "Forbidden",
+													"code": 403,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												},
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/person/v1/<long>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"person",
+																"v1",
+																"<long>"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "<object>"
+												},
+												{
+													"name": "No Content",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/person/v1/<long>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"person",
+																"v1",
+																"<long>"
+															]
+														}
+													},
+													"status": "No Content",
+													"code": 204,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										}
+									],
+									"protocolProfileBehavior": {},
+									"_postman_isSubFolder": true
+								},
+								{
+									"name": "Find all people",
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/person/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"person",
+												"v1"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/person/v1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"person",
+														"v1"
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/person/v1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"person",
+														"v1"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[\n {\n  \"_links\": [\n   {\n    \"deprecation\": \"<string>\",\n    \"href\": \"<string>\",\n    \"hreflang\": \"<string>\",\n    \"media\": \"<string>\",\n    \"rel\": \"<string>\",\n    \"templated\": \"<boolean>\",\n    \"title\": \"<string>\",\n    \"type\": \"<string>\"\n   },\n   {\n    \"deprecation\": \"<string>\",\n    \"href\": \"<string>\",\n    \"hreflang\": \"<string>\",\n    \"media\": \"<string>\",\n    \"rel\": \"<string>\",\n    \"templated\": \"<boolean>\",\n    \"title\": \"<string>\",\n    \"type\": \"<string>\"\n   }\n  ],\n  \"address\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"id\": \"<long>\",\n  \"lastName\": \"<string>\"\n },\n {\n  \"_links\": [\n   {\n    \"deprecation\": \"<string>\",\n    \"href\": \"<string>\",\n    \"hreflang\": \"<string>\",\n    \"media\": \"<string>\",\n    \"rel\": \"<string>\",\n    \"templated\": \"<boolean>\",\n    \"title\": \"<string>\",\n    \"type\": \"<string>\"\n   },\n   {\n    \"deprecation\": \"<string>\",\n    \"href\": \"<string>\",\n    \"hreflang\": \"<string>\",\n    \"media\": \"<string>\",\n    \"rel\": \"<string>\",\n    \"templated\": \"<boolean>\",\n    \"title\": \"<string>\",\n    \"type\": \"<string>\"\n   }\n  ],\n  \"address\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"id\": \"<long>\",\n  \"lastName\": \"<string>\"\n }\n]"
+										},
+										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/person/v1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"person",
+														"v1"
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/person/v1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"person",
+														"v1"
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Create a new person",
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"_links\": [\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        },\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        }\n    ],\n    \"address\": \"<string>\",\n    \"firstName\": \"<string>\",\n    \"gender\": \"<string>\",\n    \"id\": \"<long>\",\n    \"lastName\": \"<string>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/person/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"person",
+												"v1"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"_links\": [\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        },\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        }\n    ],\n    \"address\": \"<string>\",\n    \"firstName\": \"<string>\",\n    \"gender\": \"<string>\",\n    \"id\": \"<long>\",\n    \"lastName\": \"<string>\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/person/v1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"person",
+														"v1"
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"_links\": [\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        },\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        }\n    ],\n    \"address\": \"<string>\",\n    \"firstName\": \"<string>\",\n    \"gender\": \"<string>\",\n    \"id\": \"<long>\",\n    \"lastName\": \"<string>\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/person/v1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"person",
+														"v1"
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"_links\": [\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        },\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        }\n    ],\n    \"address\": \"<string>\",\n    \"firstName\": \"<string>\",\n    \"gender\": \"<string>\",\n    \"id\": \"<long>\",\n    \"lastName\": \"<string>\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/person/v1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"person",
+														"v1"
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"_links\": [\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        },\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        }\n    ],\n    \"address\": \"<string>\",\n    \"firstName\": \"<string>\",\n    \"gender\": \"<string>\",\n    \"id\": \"<long>\",\n    \"lastName\": \"<string>\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/person/v1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"person",
+														"v1"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n \"_links\": [\n  {\n   \"deprecation\": \"<string>\",\n   \"href\": \"<string>\",\n   \"hreflang\": \"<string>\",\n   \"media\": \"<string>\",\n   \"rel\": \"<string>\",\n   \"templated\": \"<boolean>\",\n   \"title\": \"<string>\",\n   \"type\": \"<string>\"\n  },\n  {\n   \"deprecation\": \"<string>\",\n   \"href\": \"<string>\",\n   \"hreflang\": \"<string>\",\n   \"media\": \"<string>\",\n   \"rel\": \"<string>\",\n   \"templated\": \"<boolean>\",\n   \"title\": \"<string>\",\n   \"type\": \"<string>\"\n  }\n ],\n \"address\": \"<string>\",\n \"firstName\": \"<string>\",\n \"gender\": \"<string>\",\n \"id\": \"<long>\",\n \"lastName\": \"<string>\"\n}"
+										},
+										{
+											"name": "Created",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"_links\": [\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        },\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        }\n    ],\n    \"address\": \"<string>\",\n    \"firstName\": \"<string>\",\n    \"gender\": \"<string>\",\n    \"id\": \"<long>\",\n    \"lastName\": \"<string>\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/person/v1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"person",
+														"v1"
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Update a specific person",
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"_links\": [\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        },\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        }\n    ],\n    \"address\": \"<string>\",\n    \"firstName\": \"<string>\",\n    \"gender\": \"<string>\",\n    \"id\": \"<long>\",\n    \"lastName\": \"<string>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/person/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"person",
+												"v1"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"_links\": [\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        },\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        }\n    ],\n    \"address\": \"<string>\",\n    \"firstName\": \"<string>\",\n    \"gender\": \"<string>\",\n    \"id\": \"<long>\",\n    \"lastName\": \"<string>\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/person/v1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"person",
+														"v1"
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"_links\": [\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        },\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        }\n    ],\n    \"address\": \"<string>\",\n    \"firstName\": \"<string>\",\n    \"gender\": \"<string>\",\n    \"id\": \"<long>\",\n    \"lastName\": \"<string>\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/person/v1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"person",
+														"v1"
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"_links\": [\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        },\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        }\n    ],\n    \"address\": \"<string>\",\n    \"firstName\": \"<string>\",\n    \"gender\": \"<string>\",\n    \"id\": \"<long>\",\n    \"lastName\": \"<string>\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/person/v1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"person",
+														"v1"
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Created",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"_links\": [\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        },\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        }\n    ],\n    \"address\": \"<string>\",\n    \"firstName\": \"<string>\",\n    \"gender\": \"<string>\",\n    \"id\": \"<long>\",\n    \"lastName\": \"<string>\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/person/v1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"person",
+														"v1"
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"_links\": [\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        },\n        {\n            \"deprecation\": \"<string>\",\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"media\": \"<string>\",\n            \"rel\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\"\n        }\n    ],\n    \"address\": \"<string>\",\n    \"firstName\": \"<string>\",\n    \"gender\": \"<string>\",\n    \"id\": \"<long>\",\n    \"lastName\": \"<string>\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/person/v1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"person",
+														"v1"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n \"_links\": [\n  {\n   \"deprecation\": \"<string>\",\n   \"href\": \"<string>\",\n   \"hreflang\": \"<string>\",\n   \"media\": \"<string>\",\n   \"rel\": \"<string>\",\n   \"templated\": \"<boolean>\",\n   \"title\": \"<string>\",\n   \"type\": \"<string>\"\n  },\n  {\n   \"deprecation\": \"<string>\",\n   \"href\": \"<string>\",\n   \"hreflang\": \"<string>\",\n   \"media\": \"<string>\",\n   \"rel\": \"<string>\",\n   \"templated\": \"<boolean>\",\n   \"title\": \"<string>\",\n   \"type\": \"<string>\"\n  }\n ],\n \"address\": \"<string>\",\n \"firstName\": \"<string>\",\n \"gender\": \"<string>\",\n \"id\": \"<long>\",\n \"lastName\": \"<string>\"\n}"
+										}
+									]
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"variable": [
+		{
+			"id": "baseUrl",
+			"key": "baseUrl",
+			"value": "//localhost:8080/",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
