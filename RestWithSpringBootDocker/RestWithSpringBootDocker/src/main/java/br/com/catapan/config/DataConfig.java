@@ -16,9 +16,9 @@ public class DataConfig {
 	public DataSource dataSource() {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-		dataSource.setUrl("jdbc:mysql://db:3306/rest_with_spring_boot?useTimezone=true&serverTimezone=UTC&useSSL=false");
-		dataSource.setUsername("root");
-		dataSource.setPassword("docker");
+		dataSource.setUrl("jdbc:mysql://restwithspringboot.cnff0nyw6ji5.us-east-2.rds.amazonaws.com:3308/rest_with_spring_boot?useTimezone=true&serverTimezone=UTC&useSSL=false");
+		dataSource.setUsername("docker");
+		dataSource.setPassword("docker123");
 		return dataSource;
 	}
 
